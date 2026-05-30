@@ -1,12 +1,11 @@
 # Translator Website
 
-A small Java website that translates common phrases from English, Spanish, or French into Chinese, Spanish, or French.
+A small Python website that translates common phrases from English, Spanish, or French into Chinese, Spanish, or French.
 
 ## Run
 
 ```bash
-javac TranslatorWebsite.java
-java TranslatorWebsite
+python3 app.py
 ```
 
 Then open:
