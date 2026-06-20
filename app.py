@@ -5,6 +5,7 @@ from urllib.parse import parse_qs
 import mimetypes
 import unicodedata
 
+print("hello")
 
 ROOT = Path(__file__).parent
 HOST = "127.0.0.1"
