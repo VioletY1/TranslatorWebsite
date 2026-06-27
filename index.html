@@ -14,19 +14,22 @@
           <h1>Translate phrases across English, Spanish, French, and Chinese.</h1>
         </div>
 
-        <form method="post" action="/" class="translator-form">
         <div class="language-bar" aria-label="Language choices">
           <label>
             <span>From</span>
-            <select id="sourceLanguage" name="source_language">
-              {{ source_options }}
+            <select id="sourceLanguage">
+              <option value="english" selected>English</option>
+              <option value="spanish">Spanish</option>
+              <option value="french">French</option>
             </select>
           </label>
 
           <label>
             <span>To</span>
-            <select id="targetLanguage" name="target_language">
-              {{ target_options }}
+            <select id="targetLanguage">
+              <option value="chinese" selected>Chinese</option>
+              <option value="spanish">Spanish</option>
+              <option value="french">French</option>
             </select>
           </label>
         </div>
@@ -34,20 +37,20 @@
         <div class="workspace">
           <label class="panel">
             <span class="panel-label">Original</span>
-            <textarea id="sourceText" name="text" placeholder="Type a phrase, like "Good morning"">{{ source_text }}</textarea>
+            <textarea id="sourceText" placeholder="Type a phrase, like "Good morning""></textarea>
           </label>
 
           <section class="panel output-panel" aria-live="polite">
             <div class="panel-label-row">
               <span class="panel-label">Translation</span>
             </div>
-            <p id="translationOutput" class="translation-output{{ output_class }}">{{ translation }}</p>
+            <p id="translationOutput" class="translation-output empty">Your translation will appear here.</p>
           </section>
         </div>
 
         <div class="actions">
-          <button id="translateButton" class="primary-button" type="submit">Translate</button>
-          <a class="secondary-button" href="/">Clear</a>
+          <button id="translateButton" class="primary-button" type="button">Translate</button>
+          <button id="clearButton" class="secondary-button" type="button">Clear</button>
         </div>
 
         <section class="phrase-bank" aria-label="Suggested phrases">
@@ -55,10 +58,11 @@
             <h2>Try a phrase</h2>
             <p>Pick one, then change the languages above.</p>
           </div>
-          <div id="phraseButtons" class="phrase-buttons">{{ phrase_buttons }}</div>
+          <div id="phraseButtons" class="phrase-buttons"></div>
         </section>
-        </form>
       </section>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
